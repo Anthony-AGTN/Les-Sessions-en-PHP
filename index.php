@@ -1,20 +1,18 @@
-<?php require 'inc/data/products.php'; ?>
-<?php require 'inc/head.php'; ?>
 <?php
 
-  // Test de l'envoi du formulaire
-  if(!empty($_GET))
-  {
-        // On enregistre la carte en session
-        $_SESSION['carts'][] = $_GET['add_to_cart'];
-        // On redirige vers le fichier index.php
-        header('Location: /index.php');
-        exit();
-    }
-      else
-    {
-      $errorMessage = 'Veuillez inscrire vos identifiants svp !';
-    }
+require 'inc/data/products.php';
+require 'inc/head.php';
+
+// Test de l'envoi du formulaire
+if (!empty($_GET)) {
+    // On enregistre la carte en session
+    $_SESSION['carts'][] = $_GET['add_to_cart'];
+    // On redirige vers le fichier index.php
+    header('Location: /index.php');
+    exit();
+} else {
+    $errorMessage = 'Veuillez inscrire vos identifiants svp !';
+}
 ?>
 <section class="cookies container-fluid">
     <div class="row">
