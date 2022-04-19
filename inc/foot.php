@@ -9,6 +9,7 @@
                 <li><a href="#">À propos</a></li>
                 <li><a href="#">Recrutement</a></li>
                 <li><a href="#">Contact</a></li>
+                <li><a href="../logout.php">Logout</a></li>
             </ul>
         </div>
     </nav>

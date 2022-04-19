@@ -1,4 +1,19 @@
-<?php require 'inc/head.php'; ?>
+<?php require 'inc/head.php'; 
+
+  // Test de l'envoi du formulaire
+  if(!empty($_POST))
+  {
+        // On enregistre le login en session
+        $_SESSION['login'] = $_POST['loginname'];
+        // On redirige vers le fichier index.php
+        header('Location: /index.php');
+        exit();
+    }
+      else
+    {
+      $errorMessage = 'Veuillez inscrire vos identifiants svp !';
+    }
+?>
 <div class="container" style="margin-top:40px">
     <div class="row">
         <div class="col-sm-6 col-md-4 col-md-offset-4">
